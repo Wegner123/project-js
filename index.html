@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <form id="addTaskForm">
+            <div>
+                <label for="taskTitle">Tytuł zadania:</label>
+                <input type="text" id="taskTitle" required>
+            </div>
+            <div>
+                <label for="taskDescription">Opis:</label>
+                <textarea id="taskDescription"></textarea>
+            </div>
+            <div>
+                <label for="taskDueDate">Termin wykonania:</label>
+                <input type="date" id="taskDueDate">
+            </div>
+            <button type="submit">Dodaj zadanie</button>
+        </form>
+
+        <div class="filters">
+            <h2>Filtry i Sortowanie</h2>
+        </div>
+
+        <div class="task-list-container">
+            <h2>Lista Zadań</h2>
+            <ul id="taskList">
+            </ul>
+        </div>
+
+        <div class="data-management">
+            <h2>Zarządzanie Danymi</h2>
+            <button id="exportData">Eksportuj dane (JSON)</button>
+            <label for="importFile" class="button-like-label">Importuj dane (JSON)</label>
+            <input type="file" id="importFile" accept=".json" style="display: none;">
+        </div>
+
+    </div>
+
+    <script src="app_combined.js"></script>
+</body>
+</html>
